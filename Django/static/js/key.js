@@ -1,0 +1,31 @@
+window.onload=function(){
+     $('form').validate({
+        rules:{
+            forward_pass:{
+                required:true,
+            },
+            new_pass:{
+                required:true,
+                minlength:6,
+            },
+            new_pass1:{
+                equalTo:'#exampleInputPassword1',
+                required:true,
+            }
+        },
+        messages:{
+            forward_pass:{
+                required:'请输入旧密码',
+            },
+            new_pass:{
+                required:'请输入新密码',
+                minlength:'至少六位',
+            },
+            new_pass1:{
+                required:'请再次输入新密码',
+                equalTo:'两次密码不一致',
+            }
+        }
+    });
+
+};

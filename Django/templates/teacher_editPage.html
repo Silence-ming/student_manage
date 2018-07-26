@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/input.css">
+    <script src="/static/js/jQuery.js"></script>
+     <script src="/static/js/jquery.validate.js"></script>
+</head>
+<body>
+    <div class="box">
+     <div class="return">
+        <a href="/teacher.html/" class="iconfont">返回</a>
+    </div>
+        <h2>编辑页面</h2>
+        <form action="/teacher_edit/" method="post">
+            <input type="hidden" value="{{ teacher.id }}" name='id'>
+            <label for="name">姓名： </label>
+            <input type="text" id="name" name="name" value="{{ teacher.name }}"> <br>
+            <span>性别： </span>
+            {% if teacher.sex == '男' %}
+                <input type="radio" name="sex" value="男" checked="checked"> 男
+                 <input type="radio" name="sex" value="女" >女 <br>
+             {% else %}
+                  <input type="radio" name="sex" value="男" > 男
+                <input type="radio" name="sex" value="女" checked="checked">女 <br>
+            {% endif %}
+
+             <label for="class">班级： </label>
+            <select name="cla" id="class" multiple size="5">
+                {% for class in classes %}
+                    <option value="{{ class.id }}">{{ class.number }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="确认">
+        </form>
+    </div>
+</body>
+<script>
+    $('form').validate({
+        rules:{
+            name:{
+                required:true,
+            },
+            class:{
+                required:true,
+            },
+        },
+        messages:{
+            name:{
+                required:'请输入老师名字',
+            },
+            class:{
+                required:'请选择该老师所带班级',
+            },
+        }
+    });
+</script>
+</html>

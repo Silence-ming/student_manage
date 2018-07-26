@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <link rel="stylesheet" href="/static/css/school.css">
+</head>
+
+<body>
+	<section>
+		<header>
+            <div class="top"><h1>后台学生管理系统</h1></div>
+            <div class="bottom">
+                <div class="left">
+                     <img src="{{ img_url }}" alt="" class="img_head">
+                    <p class="user">欢迎管理员
+                        <span class="userName"> {{ user }} </span> 光临本系统</p>
+                </div>
+                <div class="right">
+                    <a href="/exit/" id="exit">退出系统</a>
+                    <a href="/keyPage/" id="key" target="d0">修改密码</a>
+                </div>
+            </div>
+
+        </header>
+		<aside>
+            <div class="header"><span>XUE SHENG GUAN LI</span></div>
+            <div class="userManage">
+                <div class="head">
+                    <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                   <span> 用户管理</span>
+                </div>
+                <div class="con">
+                <a href="/teacher.html/" target="d0">老师管理</a>
+                <a href="/student.html/" target="d0">学生管理</a>
+                <a href="/class.html/" target="d0">班级管理</a>
+                </div>
+            </div>
+		</aside>
+		<div class="content">
+			<iframe src="" frameborder="0" name="d0"></iframe>
+		</div>
+	</section>
+
+    <script>
+        a=document.querySelectorAll('.con a');
+        for(var i=0;i<a.length;i++){
+            a[i].onclick=function(){
+                for(var j=0;j<a.length;j++){
+                    a[j].style.color='#000'
+                }
+                this.style.color='yellow'
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+	*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	section,body,html{
+		height: 100%;
+		width: 100%;
+	}
+	header{
+		width: 100%;
+		height: 25%;
+	}
+    header .top{
+		height:80%;width:100%;
+        background-image:url("/static/img/header_top.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    h1{
+        padding-left:100px;color:#fff;line-height:100px;
+        text-shadow: 5px 5px 2px #000;
+        height:100%;font-size:40px;
+    }
+    header .bottom{
+        height:20%;
+        background:#A3C6FE;
+        font-weight: 600;
+        line-height:35px;
+       box-shadow: 0 0 10px #ccc;
+    }
+    .bottom .left{
+        width:50%;height:100%;
+        float:left;color:#000;
+    }
+    .bottom .left p{
+        text-align: center;
+        overflow: hidden;
+        line-height:30px;
+        position:relative;
+    }
+    .bottom .right{
+        width:50%;height:100%;
+        float:right;
+    }
+    .bottom .right a{
+        float:right;margin-right:50px;
+
+        text-decoration: none;
+    }
+    .bottom .right a:hover{
+        color:red;
+    }
+    .left .userName{
+        color:blue;
+    }
+    #exit{
+        font-weight:600;
+    }
+	aside {
+        width: 15%;
+        height: 75%;
+        float: left;
+        background: #A3C6FE;
+    }
+    .header{
+        width:100%;height:5%;
+        background:#49A5E0;
+    }
+    .header span{
+        color:#fff;float:right;padding-right:5px;
+        line-height: 25px;text-shadow: 2px 2px 2px #000;
+    }
+    .userManage{
+        width:100%;height:150px;
+    }
+    .userManage .head{
+        margin-top:5px;
+        background: -webkit-linear-gradient(left,rgba(200,0,0,1),rgba(200,0,0,0));
+        width:100%;height:25px;text-align:center;
+        font-size:18px;
+    }
+    .userManage .con{
+        height:120px;background:#68A8FF;
+        margin-top:5px;
+        overflow: hidden;
+    }
+    .con a{
+        width:60%;border-bottom:1px solid #fff;
+        margin:auto;margin-top:10px;
+        text-decoration: none;text-align: center;
+		display: block;color:#000;
+	}
+    a:hover{
+        color:yellow;
+    }
+	.content{
+		width: 85%;
+		height: 75%;
+		float: right;
+	}
+	iframe{
+		width: 100%;
+		height: 100%;
+	}
+    .img_head{
+        border-radius: 50%;
+        width:30px;height:30px;
+        float:left;margin-left:350px;
+    }
+

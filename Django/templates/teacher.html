@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_614474_gjkbvuazug4.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+     <script src="/static/js/jQuery.js"></script>
+    <script src="/static/js/index.js"></script>
+</head>
+<body>
+    <h2>老师信息</h2>
+    <table>
+        <tr>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>班级</th>
+            <th>操作</th>
+        </tr>
+        {% for item in data %}
+        <tr>
+            <td class="name">{{ item.name }}</td>
+            <td class="sex">{{ item.sex }}</td>
+            <td>
+                {%  for i in item.number %}
+                    {{ i }}
+                {% endfor %}
+            </td>
+            <td >
+                <a href="/teacher_del/{{ item.id }}" class="iconfont">&#xe625;</a>
+                <a href="/teacher_editPage.html/{{ item.id }}" target="d0" class="iconfont" id="edit">&#xe608;</a>
+            </td>
+        </tr>
+        {% endfor %}
+       <tr>
+           <td colspan="5">
+               <a href="/teacher_addPage.html/" target="d0" class="iconfont" id="del">&#xe726;</a>
+           </td>
+       </tr>
+    </table>
+</body>
+</html>

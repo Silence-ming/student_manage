@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/input.css">
+</head>
+<body>
+    <div class="return">
+        <a href="/class.html/" class="iconfont">返回</a>
+    </div>
+    <div class="box">
+        <h2>编辑页面</h2>
+        <form action="/class_edit/" method="post">
+            <input type="hidden" value="{{ classes.id }}" name="id">
+            <label for="class">班级： </label>
+            <input type="text" id="class" name="class" value="{{ classes.number }}" disabled="true"> <br>
+            <label for="teacher">老师： </label>
+            <select name="teacher" id="teacher" multiple size="5">
+                {% for teacher in teachers %}
+                <option value="{{ teacher.id }}">{{ teacher.name }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="确定">
+        </form>
+    </div>
+</body>
+</html>

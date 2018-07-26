@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+    -webkit-user-select: none;
+}
+table{
+    width:600px;
+    height:auto;
+    margin:auto;
+    margin-top:30px;
+}
+th{
+    height:25px;
+    background:-webkit-linear-gradient(top,#A3C6FE,#fff,#A3C6FE);
+}
+tr{
+    height:25px;margin-top:20px;
+    background:#ccc;text-align: center;
+}
+#edit{
+    margin-left:10px;
+}
+a{
+    text-decoration: none;
+    color:blue;
+}
+a:hover{
+    color:red;
+}
+h2{
+    width:100px;height:30px;
+    margin:0 auto;margin-top:5px;
+}
+#del{
+    font-size:30px;
+}

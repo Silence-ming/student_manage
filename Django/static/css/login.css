@@ -1,0 +1,28 @@
+body{
+    background-image: url("/static/img/a.jpg");
+    background-size: cover;
+}
+h2{
+    text-align:center;
+}
+.bigBox{
+    width:400px;height:420px;
+    background:rgba(0,0,0,0.2);
+    border-radius:10px;
+    position:fixed;left:0;right:0;top:0;bottom:0;
+    margin:auto;padding:10px;
+}
+form{
+    width:60%;margin:auto;
+}
+h3{
+    text-align:center;
+}
+canvas{
+    margin-top:20px;float:right;
+    border:1px solid lightseagreen;border-radius:5px;
+}
+.error,.message{
+    color:red;margin:0;padding:0;
+    font-weight: 600;
+}
